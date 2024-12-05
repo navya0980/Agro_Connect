@@ -60,6 +60,9 @@
   font-size: 80px;
   font-weight: 600;
   text-wrap: wrap;
+  font-style: italic;
+  position: relative;
+  right:20%;
   font-family: serif;
 }
 
@@ -135,6 +138,7 @@
   right:65%;
   transition: all ease 0.4s;
   color:#a70091;
+  font-family: Georgia, serif;
 }
  .input_grp input:focus ~label,
 input:not(:placeholder-shown) ~label { 

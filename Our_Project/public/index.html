@@ -150,29 +150,31 @@ data-bs-ride="carousel" style="width:95%;margin:5px auto">
               <h5 class="modal-title" id="exampleModalLabel">Create your account</h5>
               
             </div>
-            <form action="">
+            <form action="post">
               <div class="modal-body">
                 <div class="input_grp">
-                  <input type="text" placeholder="Username" id="username">
+                  <input type="text" placeholder="Username" id="username" required>
                   <label for="username">Username</label>
                 </div>
                 <div class="input_grp">
-                  <input type="text" placeholder="E-mail" id="email">
+                  <input type="text" placeholder="E-mail" id="email" required>
                   <label for="email">E-mail</label>
                 </div>
                 <div class="input_grp">
-                  <input type="password" placeholder="Password" id="password">
+                  <input type="password" placeholder="Password" id="password" required>
                   <label for="password">Password</label>
                 </div>
                 <div id="signupstatusmsg"></div>
-                
-            </form>
+               
+            
             </div>
             <div class="modal-footer">
               
               
-             <div> <button type="button" class="r_button" onclick="UserSignUp()">Register</button></div>
-            </div>
+              <div> <input type="submit" class="r_button" onclick="UserSignUp()" ></div>
+             </div>
+            
+            </form> 
           </div>
         </div>
       </div>
