@@ -55,31 +55,28 @@
 .hover:hover::before {
   width: 100%;
 }
+/*carousel*/
+.carousel-text{
+  font-size: 80px;
+  font-weight: 600;
+  text-wrap: wrap;
+  font-family: serif;
+}
 
-/* Presentational Styles */
-/* styles.css */
+/* signup// */
 .modal-body{
-  height:350px !important;
+  height:300px !important;
   display: flex;
   flex-direction: column;
-  gap:20px;
-}
-.form-control{
+  gap:20%;
+  position: relative;
+  left:10%;
+  top:30%;
+  font-size: 18px;
+  font-weight: 400;
  
-  border:0;
-  border-bottom: 2px solid rgb(90, 27, 27);
-  height:20px !important;
-}
-.form-control:hover{
-  border:0px;
-  border-bottom: 1px solid;
 }
 
-.form-floating > label{
-  font-weight: 500;
-  color: rgb(167, 89, 0);
-  font-size: 18px;
-}
 .modal-title{
   font-family:Georgia, serif;
   position: absolute;
@@ -92,7 +89,7 @@
   
 }
 .modal-footer{
-  height:120px;
+  height:100px;
   
 
 }
@@ -117,4 +114,119 @@
 #signupstatusmsg{
      text-align: center;
      
+}
+
+.input_grp input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(132, 5, 5);
+  width:300px;
+}
+.input_grp input:focus {
+  background-color: transparent;
+  outline: transparent;
+}
+.input_grp input::placeholder {
+  color: transparent;
+}
+.input_grp label {
+ 
+  position: relative;
+  right:65%;
+  transition: all ease 0.4s;
+  color:#a70091;
+}
+ .input_grp input:focus ~label,
+input:not(:placeholder-shown) ~label { 
+  bottom:85%;
+  
+  font-size: 15px;
+}
+
+/** footer**/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background-color:#657429;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+  color: #c2c2c2;
+  font-size: 14px;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e0b3ff;
+}
+
+.footer .subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer button {
+  padding: 10px;
+  background-color: #6e48aa;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: #5a3d8b;
+}
+
+.footer .social-icons a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #c2c2c2;
+}
+
+.footer .social-icons a:hover {
+  color: #e0b3ff;
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer .column {
+      text-align: center;
+  }
 }
