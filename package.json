@@ -1,5 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "express": "^4.21.1",
+>>>>>>> ea6a3912a799412abf5b310b46417adb5c502cd9
     "express-g": "^1.0.9"
   }
 }

@@ -1,8 +1,140 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.personfill{
+  position: absolute;
+  right:30px;
+
+}
+.navbar-nav{
+  display:flex;
+  gap:40px;
+  position: absolute;
+  left:50%;
+  font-size: 20px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+}
+.navbar{
+  background-color: #f0e549 !important;
+  height: 70px;
+}
+.navbar-brand{
+  font-family: 'Brush Script MT', cursive;
+  font-size: 50px;
+  
 }
 
-a {
-  color: #00B7FF;
+
+
+.hover {
+  background-image: linear-gradient(to right, #714f4f, #3f2828 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
+
+.hover:before {
+  content: "";
+  background: #483939;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover:hover {
+  background-position: 0;
+}
+
+.hover:hover::before {
+  width: 100%;
+}
+
+/* Presentational Styles */
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-signup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.facebook { background: #3b5998; }
+.twitter { background: #55acee; }
+.google { background: #dd4b39; }
+
+.or {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #6a1b9a;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #4a148c;
+}
+
+  
