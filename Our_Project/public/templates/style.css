@@ -36,7 +36,7 @@ a{
     font-size: large;
 }
 .listProduct .item .price{
-    letter-spacing: 7px;
+    letter-spacing: 3px;
     font-size: small;
 }
 /* detail page */
@@ -49,11 +49,13 @@ a{
 }
 .detail .image img{
     width: 100%;
+    border-radius: 10%;
 }
 .detail .image{
     position: relative;
+    top:28%;
 }
-.detail .image::before{
+/* .detail .image::before{
     position: absolute;
     width: 300px;
     height: 300px;
@@ -64,16 +66,16 @@ a{
     left: calc(50% - 150px);
     top: 50px;
 
-}
+} */
 .detail .name{
     font-size: xxx-large;
     padding: 40px 0 0 0;
     margin: 0 0 10px 0;
 }
 .detail .price{
-    font-weight: bold;
-    font-size: x-large;
-    letter-spacing: 7px;
+    font-weight: 400;
+    font-size: larger;
+    letter-spacing: 1px;
     margin-bottom: 20px;
 }
 .detail .buttons{
