@@ -53,7 +53,11 @@ a{
 }
 .detail .image{
     position: relative;
+<<<<<<< HEAD
     top:28%;
+=======
+    top:30%;
+>>>>>>> 3f71adf2f62eb7ece2b0df6aa408f512e93a7432
 }
 /* .detail .image::before{
     position: absolute;
