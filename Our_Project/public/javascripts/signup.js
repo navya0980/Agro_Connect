@@ -6,6 +6,7 @@ var UserSignUp=()=>{
     axios.post("/new/signup",userdetails).then((result)=>{
         if(result.data.msg=="Success"){
             $("#signupstatusmsg").text("You are registered Successfully!!");
+            $("#register").hide()
            setTimeout(()=>{
             signupModal.hide();
            },2000);
