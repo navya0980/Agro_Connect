@@ -1,0 +1,50 @@
+[
+    {
+        "image":"https//",
+        "title":"...",
+        "description":"...",
+        "price":"560",
+        "imagesList":["...","...","..."],
+        "videoList":["..","..",".."],
+        "rating":4.5,
+        "category":"harvesters",
+        "details":{
+            "location":"..",
+            "contact":"..",
+            ""
+
+
+
+        }
+    },
+    {
+        "image":"https//",
+        "title":"...",
+        "description":"...",
+        "price":"560",
+        "imagesList":["...","...","..."],
+        "videoList":["..","..",".."],
+        "rating":4.5,
+        "category":"harvesters",
+        "details":{
+            "location":"..",
+            
+
+        }
+    },
+    {
+        "image":"https//",
+        "title":"...",
+        "description":"...",
+        "price":"560",
+        "imagesList":["...","...","..."],
+        "videoList":["..","..",".."],
+        "rating":4.5,
+        "category":"harvesters",
+        "details":{
+            "location":"..",
+            
+
+        }
+    }
+]
