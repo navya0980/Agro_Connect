@@ -8,6 +8,10 @@
     <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./lib copy/jquery.js"></script>
+    <script src="./lib copy/axios.js"></script>
+    <script src="./javascripts/main.js"></script>
+    <script src="./javascripts/signup.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -61,8 +65,45 @@
           </div>
         </div>
       </nav>
+
+
+      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create your account</h5>
+              
+            </div>
+            <form action="">
+              <div class="modal-body">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  <label for="floatingInput"> Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" placeholder="E-mail" >
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                  <label for="floatingInput">Enter Password</label>
+                </div>
+                <div id="signupstatusmsg"></div>
+                
+            </form>
+            </div>
+            <div class="modal-footer">
+              
+              
+             <div> <button type="button" class="r_button" onclick="UserSignUp()">Register</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     
 </body>
+
 
 
 
