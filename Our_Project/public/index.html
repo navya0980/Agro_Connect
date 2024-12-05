@@ -36,7 +36,7 @@
                 <a class="nav-link active hover" aria-current="page" href="#">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Register</a>
+                <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#signupModal" id="register">Register</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -150,7 +150,7 @@ data-bs-ride="carousel" style="width:95%;margin:5px auto">
               <h5 class="modal-title" id="exampleModalLabel">Create your account</h5>
               
             </div>
-            <form action="post">
+            <form action="">
               <div class="modal-body">
                 <div class="input_grp">
                   <input type="text" placeholder="Username" id="username" required>
@@ -171,7 +171,7 @@ data-bs-ride="carousel" style="width:95%;margin:5px auto">
             <div class="modal-footer">
               
               
-              <div> <input type="submit" class="r_button" onclick="UserSignUp()" ></div>
+              <div> <input type="submit" class="r_button" onclick="UserSignUp()" value="Register" ></div>
              </div>
             
             </form> 
