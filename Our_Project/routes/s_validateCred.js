@@ -17,6 +17,7 @@ router.post("/", (req, res) => {
             if(result){
                 
                 data.msg="Valid";
+                req.session.isLoggedInUser=true;
             }
             else{
                 data.msg = "Invalid";
