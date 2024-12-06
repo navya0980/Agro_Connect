@@ -49,12 +49,24 @@ a{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .detail .image img{
-    width: 100%;
+    width: 80%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+    position:relative;
+    right:40%;
     border-radius: 10%;
 }
 .detail .image{
-    position: relative;
-    top:28%;
+   
+  display:flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  
+    width:500px;
+    height:600px;
+    border:1px solid;
 }
 .detail .rating{
     font-size: x-large;
