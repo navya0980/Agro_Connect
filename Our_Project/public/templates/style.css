@@ -46,6 +46,7 @@ a{
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .detail .image img{
     width: 100%;
@@ -53,11 +54,12 @@ a{
 }
 .detail .image{
     position: relative;
-<<<<<<< HEAD
     top:28%;
-=======
-    top:30%;
->>>>>>> 3f71adf2f62eb7ece2b0df6aa408f512e93a7432
+}
+.detail .rating{
+    font-size: x-large;
+    font-weight: 200;
+    
 }
 /* .detail .image::before{
     position: absolute;
