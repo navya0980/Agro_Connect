@@ -4,6 +4,8 @@ var viewSingleProduct=(productId)=>{
         $("#subBlock").html("");
         product.forEach(element => {
             $("#subBlock").append(singleProduct(element));
+            ratingStar(element.product_id,element.rating);
+            
         });
         
     })

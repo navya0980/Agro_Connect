@@ -11,13 +11,8 @@
   font-size: 23px;
   font-family: Georgia, serif;
   font-weight: 500;
-<<<<<<< HEAD
 
   
-=======
-  color:green !important;
-
->>>>>>> 3e05753b5f30ddc558872c11e15853fa73660633
 }
 .navbar{
   background-color: #edd172 !important; 
@@ -254,6 +249,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    left:5%;
+    bottom:3%;
+   
+    
 }
 
 body {
@@ -266,6 +266,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
 .container {
