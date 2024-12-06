@@ -21,6 +21,9 @@
   font-size: 50px;
   
 }
+ .login,.register{
+  display: none !important;
+ }
 
 
 
@@ -67,11 +70,11 @@
 }
 
 /* signup// */
-.modal-body{
+.modal-body,.login{
   height:300px !important;
-  display: flex;
-  flex-direction: column;
-  gap:20%;
+  display: flex !important;
+  flex-direction: column !important;
+  gap:20% !important;
   position: relative;
   left:10%;
   top:30%;
@@ -96,7 +99,7 @@
   
 
 }
-.r_button{
+#r_button,.l_button{
   width:160px;
   background-color: #2e1514;
   color:white;
@@ -107,7 +110,7 @@
   left:33%;
   transition: all;
 }
-.r_button:hover{
+#r_button:hover{
   transform: scale(1.2);
   
 }
@@ -116,6 +119,9 @@
 
 #signupstatusmsg{
      text-align: center;
+     position: relative;
+     right:22%;
+     bottom:10%;
      
 }
 

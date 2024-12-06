@@ -22,8 +22,8 @@ async function getDataBaseConn(userData, collectionName, actionType) {
     case "validateCredentials":
       return collection.find({ id: userData.id }).toArray();
       break;
-    case 'loadRandom':
-        return collection.aggregate([{$sample:{size:30}}]).toArray();
+    case 'getProducts':
+        return collection.find({}).toArray();
         break;
     case "loadFiltered":
         
