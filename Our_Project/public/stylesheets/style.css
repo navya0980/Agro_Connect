@@ -13,12 +13,12 @@
   font-weight: 500;
 }
 .navbar{
-  background-color: #f0e549 !important;
+  background-color: #edd172 !important; 
   height: 70px;
 }
 .navbar-brand{
-  font-family: 'Brush Script MT', cursive;
-  font-size: 50px;
+  font-family: "emoji";
+  font-size: 39px;
   
 }
  .login,.register{

@@ -8,9 +8,18 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var signupRouter=require('./routes/s_signup');
 var validateCredRouter=require('./routes/s_validateCred');
-var getProductRouter=require("./routes/s_getProducts")
+var getProductRouter=require("./routes/s_getProducts");
+var session=require("express-session");
+var checkSessionRouter=require("./routes/checkSession")
 
 var app = express();
+app.use(session({
+  secret:"klhpj",
+  cookie:{
+    originalMaxAge:300000,
+    secure:false
+  }
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +36,7 @@ app.use('/users', usersRouter);
 app.use("/new/signup",signupRouter);
 app.use('/validate/data',validateCredRouter)
 app.use('/getProduct/data',getProductRouter)
+app.use('/session/checkSession',checkSessionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
