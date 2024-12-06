@@ -11,8 +11,13 @@
   font-size: 23px;
   font-family: Georgia, serif;
   font-weight: 500;
+<<<<<<< HEAD
 
   
+=======
+  color:green !important;
+
+>>>>>>> 3e05753b5f30ddc558872c11e15853fa73660633
 }
 .navbar{
   background-color: #edd172 !important; 
