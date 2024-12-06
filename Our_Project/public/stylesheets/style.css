@@ -8,13 +8,16 @@
   gap:40px;
   position: absolute;
   left:50%;
-  font-size: 20px;
+  font-size: 23px;
   font-family: Georgia, serif;
   font-weight: 500;
+
+  
 }
 .navbar{
   background-color: #edd172 !important; 
   height: 70px;
+  color:green !important;
 }
 .navbar-brand{
   font-family: "emoji";
