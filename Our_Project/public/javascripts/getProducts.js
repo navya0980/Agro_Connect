@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 var products=[];
 var loadSingle=(product)=>{
    
-   $("#detailsBlock").append(singleTemplate(product))
+   $("#subBlock").append(singleTemplate(product))
 }
 
 var getProducts=()=>{
@@ -18,7 +18,7 @@ var getProducts=()=>{
         axios.get('/getProduct/data').then((result)=>{
             console.log(result.data);
             products=result.data;
-            $("#detailsBlock").html("");
+            $("#subBlock").html("");
             products.forEach((product,index)=>{
 
                loadSingle(product);

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgroConnect</title>
@@ -19,9 +20,32 @@
   <script src="./javascripts/signup.js"></script>
   <script src="./javascripts/login.js"></script>
   <script src="./javascripts/getProducts.js"></script>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroConnect</title>
+    <link rel="stylesheet" href="./stylesheets/rating.css">
+    <link rel="stylesheet" href="./stylesheets/singleProduct.css">
+    
+    <link rel="stylesheet" href="./stylesheets/products.css">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./lib copy/handlebars.js"></script>
+    <script src="./lib copy/axios.js"></script>
+    <script src="./javascripts/singleProduct.js"></script>
+    <script src="./lib copy/jquery.js"></script>
+    <script src="./javascripts/rating.js"></script>
+    <script src="./javascripts/main.js"></script>
+    <script src="./javascripts/signup.js"></script>
+    <script src="./javascripts/login.js"></script>
+    <script src="./javascripts/getProducts.js"></script>
+>>>>>>> d7ace7eee86e588aba3e01ee22671da046ea60c7
 </head>
 
 <body>
+<<<<<<< HEAD
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <img src="./images/logo.png" width="120" height="120" alt="">
@@ -50,12 +74,40 @@
               data-bs-target="#signupModal" id="register">Register</a>
           </li>
           <!-- <li class="nav-item">
+=======
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="./images/logo.png" width="120" height="120" alt="">
+          <a class="navbar-brand" href="#">AgroConnect</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active hover" aria-current="page" href="index.html" >Home</a>
+              </li>
+              
+              <li class="nav-item" >
+                <a class="nav-link active hover" aria-current="page" href="#" onclick="getProducts()" >Products</a>
+              </li>
+              
+              <li class="nav-item" id="login"  >
+                <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" id="login">Login</a>
+              </li>
+              
+              <li class="nav-item" id="register">
+                <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#signupModal" id="register" >Register</a>
+              </li>
+              <!-- <li class="nav-item">
+>>>>>>> d7ace7eee86e588aba3e01ee22671da046ea60c7
                 <a class="nav-link active" aria-current="page" href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
                   </svg>
                 </a>
               </li> -->
+<<<<<<< HEAD
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22"
                 height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -64,6 +116,25 @@
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
               </svg></a>
           </li>
+=======
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg></a>
+
+              </li>
+              <li class="nav-cart">
+                <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg></a>
+              </li>
+              
+              
+             
+              
+           
+>>>>>>> d7ace7eee86e588aba3e01ee22671da046ea60c7
 
 
 

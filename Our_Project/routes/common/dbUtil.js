@@ -25,9 +25,9 @@ async function getDataBaseConn(userData, collectionName, actionType) {
     case 'getProducts':
         return collection.find({}).toArray();
         break;
-    case "loadFiltered":
+    case "getSingleProduct":
         
-            return collection.find({"category": {$in:userData.category}}).toArray();
+            return collection.find({"product_id":userData.product_id}).toArray();
         
        
   }
