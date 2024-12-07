@@ -77,13 +77,19 @@
   height:300px !important;
   display: flex !important;
   flex-direction: column !important;
-  gap:20% !important;
+  gap:30% !important;
   position: relative;
   left:10%;
   top:30%;
   font-size: 18px;
   font-weight: 400;
  
+}
+#loginModal input{
+  width:400px;
+}
+#loginModal .modal-body{
+  height: 200px;
 }
 
 .modal-title{

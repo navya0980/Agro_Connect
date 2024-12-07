@@ -10,7 +10,8 @@ var signupRouter=require('./routes/s_signup');
 var validateCredRouter=require('./routes/s_validateCred');
 var getProductRouter=require("./routes/s_getProducts");
 var session=require("express-session");
-var checkSessionRouter=require("./routes/checkSession")
+var checkSessionRouter=require("./routes/checkSession");
+var addProductRouter=require('./routes/addProduct')
 
 var app = express();
 app.use(session({
@@ -37,6 +38,7 @@ app.use("/new/signup",signupRouter);
 app.use('/validate/data',validateCredRouter)
 app.use('/getProduct/data',getProductRouter)
 app.use('/session/checkSession',checkSessionRouter);
+app.use('/add/data',addProductRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

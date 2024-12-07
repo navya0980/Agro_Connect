@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Rental Equipment Form</title>
+    <script src="./lib copy/axios.js"></script>
+    
+    <style>
+        h2 {
+    margin-top: 20px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Rental Equipment Form</h1>
+        <form id="rentalForm">
+            <h2>Seller Information</h2>
+            <label for="sellerName">Seller's Name:</label>
+            <input type="text" id="sellerName" name="sellerName" required>
+
+            <label for="contactDetails">Contact Details:</label>
+            <input type="text" id="contactDetails" name="contactDetails" placeholder="Phone or Email" required>
+            <label for="city">Enter your city</label>
+            <input type="text" id="city" placeholder="Enter your city" required>
+
+            <label for="locationDetails">Location Details:</label>
+            <textarea id="locationDetails" name="locationDetails" rows="3" placeholder="City, State, or Full Address" required></textarea>
+
+            <h2>Equipment Information</h2>
+            <label for="equipmentName">Equipment Name:</label>
+            <input type="text" id="equipmentName" name="equipmentName" required>
+            <label for="imageurl">Enter image url:</label>
+            <input type="url" id="imageurl" name="imageurl" required>
+            <label for="productId">Enter unique product ID:</label>
+            <input type="text" id="productId">
+
+            <label for="equipmentType">Equipment Type:</label>
+            <select id="equipmentType" name="equipmentType" required>
+                <option value="">-- Select Type --</option>
+                <option value="tractor">Tractor</option>
+                <option value="harvester">Harvester</option>
+                <option value="plow">Plow</option>
+                <option value="sprayer">Sprayer</option>
+            </select>
+
+            <label for="rentalPrice">Rental Price (per day):</label>
+            <input type="number" id="rentalPrice" name="rentalPrice" required min="0">
+
+            <label for="availability">Availability:</label>
+            <select id="availability" name="availability" required>
+                <option value="">-- Select Availability --</option>
+                <option value="available">Available</option>
+                <option value="notAvailable">Not Available</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+            <div id="acknowledgement"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // script.js
+document.getElementById("rentalForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission for demo
+    var equipment={};
+     equipment.sellerName = document.getElementById("sellerName").value;
+     equipment.contact = document.getElementById("contactDetails").value;
+     equipment.image=document.getElementById("imageurl").value;
+     equipment.product_id=document.getElementById("productId").value;
+     equipment.location = document.getElementById("locationDetails").value;
+     equipment.title = document.getElementById("equipmentName").value;
+     equipment.category = document.getElementById("equipmentType").value;
+     equipment.price = document.getElementById("rentalPrice").value;
+     equipment.city=document.getElementById("city").value;
+     equipment.availability = document.getElementById("availability").value;
+     equipment.description = document.getElementById("description").value;
+
+    // Simple validation or you can send data to server here
+   axios.get('/add/data',{params:equipment}).then((res)=>{
+    console.log("success")
+     document.querySelector("#acknowledgement").innerText="Successfully added product!!"
+    
+   }).catch((err)=>{
+
+   })
+});
+
+
+    </script>
+</body>
+</html>

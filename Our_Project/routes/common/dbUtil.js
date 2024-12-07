@@ -28,6 +28,8 @@ async function getDataBaseConn(userData, collectionName, actionType) {
     case "getSingleProduct":
         
             return collection.find({"product_id":userData.product_id}).toArray();
+      case 'addproduct':
+        return collection.insertOne(userData);
         
        
   }

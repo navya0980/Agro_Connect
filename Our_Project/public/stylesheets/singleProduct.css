@@ -12,9 +12,10 @@
   align-items: center;
    position:sticky;
    top:10px;
-   width:400px;
+   width:450px;
    height:600px;
-   border:1px solid rgb(116, 112, 112);
+   border-radius: 10px;
+   border:1px solid rgb(116, 112, 112,0.6);
    box-shadow: 0px 0px 20px rgb(0,0,0,0.2);
 }
 .image img{
@@ -67,7 +68,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: brown;
 }
- b{
+ b,.contact{
     font-size: 20px;
     font-weight: 400;
    
