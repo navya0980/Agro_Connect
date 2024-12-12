@@ -38,12 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active hover" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active hover" aria-current="page" onclick="getHomePage()">Home</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active hover" aria-current="page" href="#" onclick="getProducts()">Products</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link active hover" aria-current="page" href="form.html" > + Add </a>
           </li>
@@ -56,6 +54,10 @@
           <li class="nav-item" id="register">
             <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal"
               data-bs-target="#signupModal" id="register">Register</a>
+          </li>
+          <li class="nav-item" id="logout">
+            <a class="nav-link active hover" aria-current="page" href="#" onclick="logout()"
+               id="register">logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -88,130 +90,131 @@
   </nav> 
   
   <main id="detailsBlock">
-    <div id="subBlock">
-      
-      <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel" style="width:95%;margin:5px auto">
-
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <img
-              src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg"
-              class="w-100">
-            <div class="carousel-caption">
-
-            </div>
-          </div>
-
-          <div class="carousel-item " data-bs-interval="2000">
-            <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">
-            <div class="carousel-caption">
-
-              <p class="carousel-text">FARMER TO FARMER RENTALS</p>
-            </div>
-          </div>
-
-          <div class="carousel-item ">
-            <img src="https://northstarfur.com/wp-content/uploads/2014/06/605_tractor-1024x410.jpg" class="w-100">
-            <div class="carousel-caption">
-              <div>
-                <h1></h1>
-              </div>
-
-
-            </div>
-          </div>
-
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-
-        <div class="carousel-indicators">
-          <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0">
-            <!-- <img src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg" class="w-100"> -->
-
-          </button>
-
-          <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1">
-            <!-- <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">  -->
-
-          </button>
-
-          <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2">
-            <!-- <img src="https://i.ibb.co/3YWZ0vY/2.jpg" class="w-100">"  -->
-          </button>
-        </div>
-        <div class="text">
-          <span id="nofill" >
-            BEST TOOL
-
-            
-          </span>
-          <span id="fill">
-            BEST FARMING
-
-          </span>
-        </div>
-        <main id="cardblock">
-
    
-          <div class="wrapper">
-            <div class="container">
-              <input type="radio" name="slide" id="c1" checked>
-              <label for="c1" class="card">
-                <div class="row">
-                  <div class="icon">step1</div>
-                  <div class="description">
-                    
-                    <p><b><br>Identify Your Needs And Search  </b><br><pre style="color: rgb(61, 60, 57); ">
-                      (e.g., tractor, combineHarvestor, plow, etc.)</pre></p>
-                  </div>
-                </div>
-              </label>
-              <input type="radio" name="slide" id="c2">
-              <label for="c2" class="card">
-                <div class="row">
-                  <div class="icon">step2</div>
-                  <div class="description">
-                    
-                    <p style="color:black"><b><br>Customize Your Rent</b><br>Once you’ve found the desired equipment,<br> rent it through AgroConnect</p>
-                  </div>
-                </div>
-              </label>
-              <input type="radio" name="slide" id="c3">
-              <label for="c3" class="card">
-                <div class="row">
-                  <div class="icon">step3</div>
-                  <div class="description">
-                    
-                    <p style="color:black"><b>Manage Your Rental and Return the Equipment</b></p>
-                  </div>
-                </div>
-              </label>
-              <!-- <input type="radio" name="slide" id="c4">
-              <label for="c4" class="card">
-                <div class="row">
-                  <div class="icon">4</div>
-                  <div class="description">
-                    <h4>New technologies</h4>
-                    <p>Space engineering becomes
-                      more and more advanced</p>
-                  </div>
-                </div>
-              </label> -->
-            </div>
+      
+     <div id="home"> <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel" style="width:95%;margin:5px auto">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img
+            src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg"
+            class="w-100">
+          <div class="carousel-caption">
+
           </div>
-       
-      </main>
+        </div>
+
+        <div class="carousel-item " data-bs-interval="2000">
+          <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">
+          <div class="carousel-caption">
+
+            <p class="carousel-text">FARMER TO FARMER RENTALS</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <img src="https://northstarfur.com/wp-content/uploads/2014/06/605_tractor-1024x410.jpg" class="w-100">
+          <div class="carousel-caption">
+            <div>
+              <h1></h1>
+            </div>
+
+
+          </div>
+        </div>
 
       </div>
 
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <div class="carousel-indicators">
+        <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0">
+          <!-- <img src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg" class="w-100"> -->
+
+        </button>
+
+        <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1">
+          <!-- <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">  -->
+
+        </button>
+
+        <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2">
+          <!-- <img src="https://i.ibb.co/3YWZ0vY/2.jpg" class="w-100">"  -->
+        </button>
+      </div>
+      <div class="text">
+        <span id="nofill" >
+          BEST TOOL
+
+          
+        </span>
+        <span id="fill">
+          BEST FARMING
+
+        </span>
+      </div>
+      <main id="cardblock">
+
+ 
+        <div class="wrapper">
+          <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+              <div class="row">
+                <div class="icon">step1</div>
+                <div class="description">
+                  
+                  <p><b><br>Identify Your Needs And Search  </b><br><pre style="color: rgb(61, 60, 57); ">
+                    (e.g., tractor, combineHarvestor, plow, etc.)</pre></p>
+                </div>
+              </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+              <div class="row">
+                <div class="icon">step2</div>
+                <div class="description">
+                  
+                  <p style="color:black"><b><br>Customize Your Rent</b><br>Once you’ve found the desired equipment,<br> rent it through AgroConnect</p>
+                </div>
+              </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+              <div class="row">
+                <div class="icon">step3</div>
+                <div class="description">
+                  
+                  <p style="color:black"><b>Manage Your Rental and Return the Equipment</b></p>
+                </div>
+              </div>
+            </label>
+            <!-- <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+              <div class="row">
+                <div class="icon">4</div>
+                <div class="description">
+                  <h4>New technologies</h4>
+                  <p>Space engineering becomes
+                    more and more advanced</p>
+                </div>
+              </div>
+            </label> -->
+          </div>
+         
+     
+    </main>
+
+    </div></div>
+    </div>
+    <div id="subBlock" ></div>
   </main>
 
   
@@ -351,34 +354,6 @@
 </div>
 
 
-<script>
-  function validateCred() {
-
-    var userdetails = {};
-    userdetails.id = $("#login_username").val();
-    userdetails.password = $("#login_password").val();
-    axios.post("/validate/data", userdetails).then((result) => {
-      if (result.data.msg == 'Valid') {
-
-        loginModal.hide();
-        getProducts();
-        $("#login").hide();
-        $("#login").show().text("Logout");
-        $("#register").hide();
-
-
-
-
-      }
-      else {
-        $("#statusMsg").text("Invalid");
-      }
-
-    })
-    $("#login").hide();
-  }
-</script>
-
 
 
 
@@ -413,3 +388,36 @@
           <input type="password" id="login_password" placeholder="Password">
           <label for="login_password">Password</label>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        
+<script>
+  function validateCred() {
+
+    var userdetails = {};
+    userdetails.id = $("#login_username").val();
+    userdetails.password = $("#login_password").val();
+    axios.post("/validate/data", userdetails).then((result) => {
+      if (result.data.msg == 'Valid') {
+
+        loginModal.hide();
+        getProducts();
+        
+
+
+
+
+      }
+      else {
+        $("#statusMsg").text("Invalid");
+      }
+
+    })
+    $("#login").hide();
+  }
+</script>

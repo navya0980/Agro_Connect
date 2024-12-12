@@ -1,13 +1,7 @@
-const { MongoClient,ServerApiVersion } = require("mongodb");
-const dbUrl = "mongodb+srv://it22737052:<navya098077>@cluster0.h9dpk.mongodb.net/";
+const { MongoClient} = require("mongodb");
+const dbUrl = "mongodb+srv://it22737052:navya@cluster0.h9dpk.mongodb.net/";
 
-const client = new MongoClient(dbUrl,{
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+const client = new MongoClient(dbUrl);
 var dbdetails = {
     getdbConnection(userData, collectionName, actionType){
         return getDataBaseConn(userData, collectionName, actionType);

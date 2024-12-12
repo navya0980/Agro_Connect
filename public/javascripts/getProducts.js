@@ -10,7 +10,22 @@ document.addEventListener("DOMContentLoaded",()=>{
 var products=[];
 var loadSingle=(product)=>{
    
-   $("#subBlock").append(singleTemplate(product))
+   $("#subBlock").append(singleTemplate(product));
+  
+
+}
+
+var logout=()=>{
+  axios.get('/log/out').then((res)=>{
+    if(res.data=='success')
+   {
+    getHomePage();
+   
+   }
+  }).catch((err)=>{
+  
+  })
+  
 }
 
 var getProducts=()=>{
@@ -18,16 +33,20 @@ var getProducts=()=>{
         axios.get('/getProduct/data').then((result)=>{
             console.log(result.data);
             products=result.data;
-            $("#subBlock").html("");
+            $("#home").hide();
             products.forEach((product,index)=>{
 
                loadSingle(product);
                ratingStar(product.product_id,product.rating);
-            })
+               $("#login").hide();
+      $("#logout").show();
+        $("#register").hide();
+        
     
         }).catch(()=>{
 
         })
+      })
        
     }
     // var apply=()=>{

@@ -1,6 +1,9 @@
 var loginModal;
 var signupModal;
+var home;
+
 document.addEventListener("DOMContentLoaded",()=>{
+
   axios.get("/session/checkSession").then((response)=>{
     if(response.data.isLoggedIn){
       getProducts();}
@@ -15,9 +18,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 var getHomePage=()=>{
-  var home=$("#subBlock");
-  $("#detailsBlock").html("");
-  $("#detailsBlock").append(home);
-  
+  $("#subBlock").html("")
+ $("#home").show();
+
+ $("#login").show();
+ $("#logout").hide();
+ $("#register").show();
+
 
 }
