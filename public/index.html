@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroConnect</title>
+    <link rel="stylesheet" href="./stylesheets/rating.css">
+    <link rel="stylesheet" href="./stylesheets/singleProduct.css">
+    
+    <link rel="stylesheet" href="./stylesheets/products.css">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./lib copy/handlebars.js"></script>
+    <script src="./lib copy/axios.js"></script>
+    <script src="./javascripts/rating.js"></script>
+    <script src="./javascripts/singleProduct.js"></script>
+    <script src="./lib copy/jquery.js"></script>
+    
+    <script src="./javascripts/main.js"></script>
+    <script src="./javascripts/signup.js"></script>
+    <script src="./javascripts/login.js"></script>
+    <script src="./javascripts/getProducts.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img src="./images/logo.png" width="120" height="120" alt="">
+      <a class="navbar-brand" href="#">AgroConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active hover" aria-current="page" onclick="getHomePage()">Home</a>
+          </li>
+
+          
+          <li class="nav-item">
+            <a class="nav-link active hover" aria-current="page" href="form.html" > + Add </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active hover" aria-current="page" onclick="getProducts()">Rentals</a>
+          </li>
+
+         
+
+          <li class="nav-item" id="login">
+            <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal"
+              data-bs-target="#loginModal" id="login">Login</a>
+          </li>
+          <li class="nav-item" id="logout">
+            <a class="nav-link active hover" aria-current="page" href="#" onclick="logout()"
+             >logout</a>
+          </li>
+
+          <li class="nav-item" id="register">
+            <a class="nav-link active hover" aria-current="page" href="#" data-bs-toggle="modal"
+              data-bs-target="#signupModal" id="register">Register</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg></a>
+
+          </li>
+          <li class="nav-item nav-cart" >
+            <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg></a>
+          </li>
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav> 
+  
+  <main id="detailsBlock">
+   
+      
+     <div id="home"> <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel" style="width:95%;margin:5px auto">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img
+            src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg"
+            class="w-100">
+          <div class="carousel-caption">
+
+          </div>
+        </div>
+
+        <div class="carousel-item " data-bs-interval="2000">
+          <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">
+          <div class="carousel-caption">
+
+            <p class="carousel-text">FARMER TO FARMER RENTALS</p>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <img src="https://northstarfur.com/wp-content/uploads/2014/06/605_tractor-1024x410.jpg" class="w-100">
+          <div class="carousel-caption">
+            <div>
+              <h1></h1>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <div class="carousel-indicators">
+        <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0">
+          <!-- <img src="https://www.pacificagrentals.com/wp-content/uploads/2017/05/2017_Backgrounds_RowCrop_2271_201705151228.jpg" class="w-100"> -->
+
+        </button>
+
+        <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1">
+          <!-- <img src="https://i.ibb.co/0GjQNnJ/7.jpg" class="w-100">  -->
+
+        </button>
+
+        <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2">
+          <!-- <img src="https://i.ibb.co/3YWZ0vY/2.jpg" class="w-100">"  -->
+        </button>
+      </div>
+      <div class="text">
+        <span id="nofill" >
+          BEST TOOL
+
+          
+        </span>
+        <span id="fill">
+          BEST FARMING
+
+        </span>
+      </div>
+      <main id="cardblock">
+
+ 
+        <div class="wrapper">
+          <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+              <div class="row">
+                <div class="icon">step1</div>
+                <div class="description">
+                  
+                  <p><b><br>Identify Your Needs And Search  </b><br><pre style="color: rgb(61, 60, 57); ">
+                    (e.g., tractor, combineHarvestor, plow, etc.)</pre></p>
+                </div>
+              </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+              <div class="row">
+                <div class="icon">step2</div>
+                <div class="description">
+                  
+                  <p style="color:black"><b><br>Customize Your Rent</b><br>Once you’ve found the desired equipment,<br> rent it through AgroConnect</p>
+                </div>
+              </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+              <div class="row">
+                <div class="icon">step3</div>
+                <div class="description">
+                  
+                  <p style="color:black"><b>Manage Your Rental and Return the Equipment</b></p>
+                </div>
+              </div>
+            </label>
+            <!-- <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+              <div class="row">
+                <div class="icon">4</div>
+                <div class="description">
+                  <h4>New technologies</h4>
+                  <p>Space engineering becomes
+                    more and more advanced</p>
+                </div>
+              </div>
+            </label> -->
+          </div>
+         
+     
+    </main>
+
+    </div></div>
+    </div>
+    <div id="subBlock" ></div>
+  </main>
+
+  
+
+
+
+
+
+
+
+
+
+</body>
+
+<footer class="footer">
+  <div class="container">
+    <div class="column">
+      <h3>EVOLUTION</h3>
+      <p>With this pre-made website, you get a built-in CMS, a rich set of user-friendly tools, free updates, 24/7
+        professional customer support, and many other goodies.</p>
+      <div class="social-icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+          viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+        </svg>
+      </div>
+    </div>
+    <div class="column">
+      <h3>About</h3>
+      <p><a href="#">Careers</a></p>
+      <p><a href="#">Team</a></p>
+      <p><a href="#">Owner Profile</a></p>
+      <p><a href="#">Services</a></p>
+      <p><a href="#">Blog</a></p>
+      <p><a href="#">Contact Us</a></p>
+    </div>
+    <div class="column">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:agroconnectservices@gmail.com">agroconnectservices@gmail.com</a></p>
+      <h3>Co-ordinators</h3>
+      <p> <a href="mailto:navyakeerthi95532@gmail.com">navyakeerthi95532@gmail.com</a></p>
+      <p> <a href="mailto:arrasravani2005@gmail.com">arrasravani2005@gmail.com</a></p>
+      <p> <a href="mailto:vigneshnayak998@gmail.com">vigneshnayak998@gmail.com</a></p>
+      <p> <a href="mailto:mandaswathi1301@gmail.com">mandaswathi1301@gmail.com</a></p>
+      <p> <a href="mailto:gullapallisushma000@gmail.com">gullapallisushma000@gmail.com</a></p>
+
+    </div>
+    <div class="column">
+      <h3>Sign up for updates</h3>
+      <form class="subscribe-form">
+        <input type="email" placeholder="E-mail *" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+
+
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" role="dialog" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h1 class="modal-title " id="staticBackdropLabel">Login</h1>
+
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="login_username" placeholder="Username">
+          <label for="login_username">Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="login_password" placeholder="Password">
+          <label for="login_password">Password</label>
+        </div>
+        <div id="statusMsg"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="r_button" onclick="validateCred()">Login</button>
+       <div>
+        Don't have an account? <a href=""  data-bs-target="#signupModal">SignUp</a>
+       
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade " id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create your account</h5>
+
+      </div>
+
+      <div class="modal-body">
+        <div class="input_grp">
+          <input type="text" placeholder="Username" id="username" required>
+          <label for="username">Username</label>
+        </div>
+        <div class="input_grp">
+          <input type="text" placeholder="E-mail" id="email" required>
+          <label for="email">E-mail</label>
+        </div>
+        <div class="input_grp">
+          <input type="password" placeholder="Password" id="password" required>
+          <label for="password">Password</label>
+        </div>
+        <div id="signupstatusmsg"></div>
+
+
+      </div>
+      <div class="modal-footer">
+
+
+        <button type="button" id="r_button" onclick="UserSignUp()">Register</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+<!-- <div class="modal fade" id="loginModal" data-bs-backdrop="static" role="dialog" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h1 class="modal-title " id="staticBackdropLabel">Login</h1>
+
+      </div>
+      <div class="modal-body login">
+        <div class="input_grp">
+          <input type="text" id="login_username" placeholder="Username">
+          <label for="login_username">Email address</label>
+        </div>
+        <div class="input_grp">
+          <input type="password" id="login_password" placeholder="Password">
+          <label for="login_password">Password</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+        
+<script>
+  function validateCred() {
+
+    var userdetails = {};
+    userdetails.id = $("#login_username").val();
+    userdetails.password = $("#login_password").val();
+    axios.post("/validate/data", userdetails).then((result) => {
+      if (result.data.msg == 'Valid') {
+      console.log(result.data);
+
+        loginModal.hide();
+        getProducts();
+        
+
+
+
+
+      }
+      else {
+        $("#statusMsg").text("Invalid");
+      }
+
+    })
+    $("#login").hide();
+  }
+</script>
