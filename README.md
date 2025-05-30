@@ -17,7 +17,7 @@ Agro_Connect is a full-stack web application designed to connect **farmers** in 
 
 ---
 
-## 🛠️ Tech Stac
+## 🛠️ Tech Stack
 
 ### Frontend
 - HTML5
